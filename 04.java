@@ -28,14 +28,14 @@ class BookingSystem {
     public void bookTicket(int ticketNumber, String customerName, int seatNumber) {
         if (count >= 10) {
             System.out.println("All seats are booked.");
-            //return;
+            
         }
 
-        // Check for seat already taken
+       
         for (int i = 0; i < count; i++) {
             if (t1[i].getSeatNumber() == seatNumber) {
                 System.out.println("Seat " + seatNumber + " is already booked.");
-               // return;
+              
             }
         }
 
@@ -48,7 +48,6 @@ class BookingSystem {
         boolean found = false;
         for (int i = 0; i < count; i++) {
             if (t1[i].getTicketNumber() == ticketNumber) {
-                // Shift left
                 for (int j = i; j < count - 1; j++) {
                     t1[j] = t1[j + 1];
                 }
